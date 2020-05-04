@@ -48,3 +48,31 @@ This problem requires two things to be checked
 2. If above condition is satisfied, count is preserved i.e. each letter of **ransomNote** is present the same number of times or lesser that of the **magazine**
 
 To assess the above conditions, I firstly created two maps **ransomNoteMap** and **magazineMap** with the letter in the respective strings and their counts. After the maps are created by iterating over the **ransomNote** and **magazine**, check the first condition i.e. if each letter of the **ransomNote** is included in the **magazine**. Above condition passed then check if the element we're iterating through has the same value or lesser in both the maps i.e. the occurance of that particular letter of **ransomNote** is lesser or equal to the occurance of that particular letter in **magazineMap**. If all the conditions satisfy then increment a temporary variable to check if all the letters of **ransomNote** satisfy the occurances constraint, yes then return **true** else **false**.
+
+## Day 4 - Number Complement
+
+**Statement:**
+Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
+
+**Example 1:**
+
+```javascript
+Input: 5
+Output: 2
+Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+```
+
+**Example 2:**
+
+```javascript
+Input: 1
+Output: 0
+Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.
+```
+
+**Note:**
+The given integer is guaranteed to fit within the range of a 32-bit signed integer.
+You could assume no leading zero bit in the integer’s binary representation.
+
+**Approach:**
+I used **javascript** to solve this problem as well, here to convert a decimal to binary [**_toString_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) method of **Number.prototype** can be used with **2** as argument. I used [**_map()_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for calculating the complement of the binary number and later [**_parseInt_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) with base **2** to convert the binary back to decimal.
