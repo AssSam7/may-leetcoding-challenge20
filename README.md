@@ -76,3 +76,26 @@ You could assume no leading zero bit in the integer’s binary representation.
 
 **Approach:**
 I used **javascript** to solve this problem as well, here to convert a decimal to binary [**_toString_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) method of **Number.prototype** can be used with **2** as argument. I used [**_map()_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) for calculating the complement of the binary number and later [**_parseInt_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) with base **2** to convert the binary back to decimal.
+
+## Day 5 - First Unique Character in a String
+
+**Statement:**
+Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+
+**Examples:**
+
+```javascript
+s = "leetcode";
+return 0;
+```
+
+```javascript
+s = "loveleetcode",
+return 2.
+```
+
+**Note:**
+You may assume the string contain only lowercase letters.
+
+**Approach:**
+The problem depicts to identify the first unique character of the string i.e. if you first identify duplicates and eliminate them from the input then rest all are the unique character of that particular string. I used [**_filter()_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method of arrays in javascript, by specifying a condition using [**_indexOf_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method returns only the duplicate of the array. Later, filtered the rest based on the duplicates incurred above. The **index** of first element in this **uniques** array is the result.
