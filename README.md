@@ -122,4 +122,4 @@ Output: 2;
 ```
 
 **Approach:**
-This problem is very simple, it just needs to identify the element that appears more than **n/2** times in the input. I created a map with element as the key and number of occurances as it's value, iterate over this map and findout which value is more than **n/2** i.e. rounded **n/2** using [**_Math.round_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round). The value of that map **>=** above rounded value, it's key is the majority element that needs to be returned from the function.
+This problem is very simple, it just needs to identify the element that appears more than **n/2** times in the input. I created a map with element as the key and number of occurences as value, iterate over this map, and findout which value is more than **n/2** i.e. rounded **n/2** using [**_Math.round_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round). The value of that map **>=** above rounded value, it's key is the majority element that needs to be returned from the function.
