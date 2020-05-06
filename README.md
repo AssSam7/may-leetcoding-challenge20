@@ -99,3 +99,27 @@ You may assume the string contain only lowercase letters.
 
 **Approach:**
 The problem depicts to identify the first unique character of the string i.e. if you first identify duplicates and eliminate them from the input then rest all are the unique characters of that particular string. I used the [**_filter_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method of arrays in javascript, by specifying a condition using the [**_indexOf_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method returns only the duplicates of the array. Later, filtered the rest based on the duplicates incurred above. The **index** of first element in this **uniques** array is the result.
+
+## Day 6 - Majority Element
+
+**Statement:**
+Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+
+You may assume that the array is non-empty and the majority element always exist in the array.
+
+**Example 1:**
+
+```javascript
+Input: [3, 2, 3];
+Output: 3;
+```
+
+**Example 2:**
+
+```javascript
+Input: [2, 2, 1, 1, 1, 2, 2];
+Output: 2;
+```
+
+**Approach:**
+This problem is very simple, it just needs to identify the element that appears more than **n/2** times in the input. I created a map with element as the key and number of occurances as it's value, iterate over this map and findout which value is more than **n/2** i.e. rounded **n/2** using [**_Math.round_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round). The value of that map **>=** above rounded value, it's key is the majority element that needs to be returned from the function.
