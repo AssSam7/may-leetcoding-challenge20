@@ -123,3 +123,13 @@ Output: 2;
 
 **Approach:**
 This problem is very simple, it just needs to identify the element that appears more than **n/2** times in the input. I created a map with element as the key and number of occurences as value, iterate over this map, and findout which value is more than **n/2** i.e. rounded **n/2** using [**_Math.round_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round). The value of that map **>=** above rounded value, it's key is the majority element that needs to be returned from the function.
+
+## Day 12 - Single Element in a Sorted Array
+
+**Statement:**
+You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once. Find this single element that appears only once.
+
+**Note:** Your solution should run in O(log n) time and O(1) space.
+
+**Approach:**
+This problem is actually simple, at the same time little tricky to handle the edge cases of efficient approach as the problem requires to be solved in **O(logn)** or **O(1)**. My approach is using a **map** which keeps track of number of occurances of the numbers, and return the key which has value exactly equal to **1**. I used [**_forEach_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) to iterate over the input and create a map with key as the elements itself and value as it's number of occurances. Later traverse through the map and return the key which has value **1**.
